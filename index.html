@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Forum</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Forum</h1>
+        
+        <div id="registrationForm" class="form">
+            <h2>Register</h2>
+            <input type="text" id="regUsername" placeholder="Username" required>
+            <input type="password" id="regPassword" placeholder="Password" required>
+            <input type="text" id="inviteCode" placeholder="Invite Code (optional)">
+            <button onclick="register()">Register</button>
+            <p id="regMessage"></p>
+        </div>
 
+        <div id="loginForm" class="form" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p id="loginMessage"></p>
+        </div>
+
+        <div id="forum" style="display: none;">
+            <h2>Welcome to the Forum!</h2>
+            <button onclick="logout()">Logout</button>
+            <div id="posts"></div>
+            <textarea id="newPost" placeholder="Write a new post..."></textarea>
+            <button onclick="addPost()">Post</button>
+        </div>
+
+        <button id="toggleFormBtn" onclick="toggleForms()">Switch to Login</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
